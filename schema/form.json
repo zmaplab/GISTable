@@ -1,6 +1,7 @@
 {
   "id": "6512f8e2893d89a96e355906",
   "resourceId": "/appid/forms/6512f8e2893d89a96e355906 | 如果为空， 默认就是 ID。主要用于应用隔离配合权限系统使用",
+  "formEngine": "formily@antd",
   "source": "",
   "table": "",
   "name": "表单1",
