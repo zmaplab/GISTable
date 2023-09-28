@@ -1,0 +1,26 @@
+{
+  "sources": {
+    "zserver": {
+      "name": "zserver",
+      "type": "postgre",
+      "database": "zserver_dev",
+      "port": 1921,
+      "user": "postgres",
+      "password": "oVk9CAkw",
+      "host": "hdy.dev",
+      "extra": {
+        "pooling": true
+      }
+    },
+    "zserver_shp": {
+      "name": "zserver_shp",
+      "type": "shape",
+      "path": "shapes/polygon_3857.shp"
+    },
+    "zserver_tiff": {
+      "name": "zserver_tiff",
+      "type": "tif",
+      "path": "shapes/polygon_3857.tif"
+    }
+  }
+}

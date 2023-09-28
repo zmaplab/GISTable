@@ -1,0 +1,91 @@
+{
+  "maps": {
+    "map1": {
+      "name": "一张图",
+      "description": "",
+      "toolbar": [
+        {
+          "component": "AdministrativeDivisions",
+          "icon": "icon-dianji",
+          "tooltip": "点查图斑",
+          "api": "http://api.zmap.xyz/project1/administrativeDivisions/my",
+          "description": "行政区选择"
+        },
+        {
+          "component": "IdentifyFeatures",
+          "icon": "icon-dianji",
+          "tooltip": "点查图斑",
+          "description": "对图层控制器中开启编辑的多个图层进行查询"
+        },
+        {
+          "component": "Add",
+          "icon": "icon-dianji",
+          "tooltip": "添加图形"
+        },
+        {
+          "component": "Remove",
+          "icon": "icon-dianji",
+          "tooltip": "删除图形"
+        },
+        {
+          "component": "ZoomIn",
+          "icon": "icon-dianji",
+          "tooltip": "放大地图"
+        },
+        {
+          "component": "ZoomOut",
+          "icon": "icon-dianji",
+          "tooltip": "缩小地图"
+        },
+        {
+          "component": "SearchFeatures",
+          "icon": "icon-search",
+          "tooltip": "搜索"
+        }
+      ],
+      "extentions": [
+        {
+          "component": "weather",
+          "props": {}
+        }
+      ],
+      "layers": [
+        {
+          "name": "影像底图",
+          "id": "64fbcd025f101b2aa4c82ee0",
+          "type": "group",
+          "children": [
+            {
+              "name": "网格",
+              "order": 1,
+              "searchable": false,
+              "projection": "EPSG:4490",
+              "visible": true,
+              "geometryType": "polygon",
+              "enabled": true,
+              "source": {
+                "service": "zserver",
+                "layer": "6514513b5a09d7a64b781d2c",
+                "url": "mapService",
+                "type": "WMS",
+                "gutter": 80,
+                "params": {
+                  "VERSION": "1.1.1",
+                  "TILED": true
+                },
+                "serverType": "geoserver",
+                "transition": 0,
+                "tileGrid": {
+                  "origin": [],
+                  "extent": [],
+                  "tileSize": 512
+                }
+              },
+              "visibleInLayerSwitcher": false
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

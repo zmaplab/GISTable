@@ -1,0 +1,65 @@
+[
+  {
+    "name": "超级管理员@系统一",
+    "statement": [
+      {
+        "effect": "Allow",
+        "action": "*",
+        "resource": "*",
+        "description": "所有权限"
+      },
+      {
+        "effect": "Allow",
+        "action": "*",
+        "resource": "/appid/*",
+        "description": "授于某个应用下所有权限"
+      },
+      {
+        "effect": "Allow",
+        "action": "allow",
+        "resource": "/bi/dashboard/*",
+        "description": "可以访问所有报表"
+      },
+      {
+        "effect": "Allow",
+        "action": "allow",
+        "resource": "/bi/question/*",
+        "description": "可以访问所有问题"
+      }
+    ]
+  },
+  {
+    "name": "角色一@系统一",
+    "statement": [
+      {
+        "effect": "Allow",
+        "action": "allow",
+        "resource": "/appid/router/xmgl/*",
+        "description": "可以访问 xmgl 下所有菜单"
+      },
+      {
+        "effect": "Allow",
+        "action": "read_write",
+        "resource": "/appid/forms/6512f8e2893d89a96e355906",
+        "description": "授于表单 6512f8e2893d89a96e355906 读取权限"
+      },
+
+      {
+        "effect": "Allow",
+        "action": "allow",
+        "resource": "/bi/question/*",
+        "description": "可以访问所有问题"
+      },
+      {
+        "effect": "Allow",
+        "action": "*",
+        "resource": "bi/dashboard/*"
+      },
+      {
+        "effect": "Deny",
+        "action": "delete",
+        "resource": "bi/dashboard/1"
+      }
+    ]
+  }
+]

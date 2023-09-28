@@ -1,0 +1,25 @@
+{
+  "layers": {
+    "description": "可以独立发布地图服务， 地图服务不应该和业务耦合， 随时可以换到别的地图服务。",
+    "polygon": {
+      "id": "6514513b5a09d7a64b781d2c",
+      "services": [],
+      "extent": [],
+      "source": "szsf",
+      "sourceTable": "polygon",
+      "sourceGeometry": "geom",
+      "sourceWhere": "",
+      "sourceProperties": [],
+      "sourceSRID": 4326,
+      "buffers": [
+        {
+          "minZoom": 1,
+          "maxZoom": 300000,
+          "zoomUnit": "scale",
+          "size": 32
+        }
+      ],
+      "styleGroups": ["polygon"]
+    }
+  }
+}

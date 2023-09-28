@@ -1,0 +1,26 @@
+{
+  "projects": {
+    "project1": {
+      "domain": "project1.zmap.xyz",
+      "pathPrefix": "",
+      "api": "http://api.zmap.xyz/project1",
+      "code": 0,
+      "iconFont": "//at.alicdn.com/t/font_xxx_vmcwlq3vurg.js",
+      "sts": {
+        "authority": "http://project1-sts.zmap.xyz",
+        "client_id": "project1-web",
+        "redirect_uri": "http://project1.zmap.xyz/signin-oidc",
+        "response_type": "id_token token",
+        "scope": "openid profile role project1-api",
+        "post_logout_redirect_uri": "http://project1.zmap.xyz/signout-callback-oidc",
+        "accessTokenExpiringNotificationTime": 10,
+        "automaticSilentRenew": true,
+        "filterProtocolClaims": true,
+        "loadUserInfo": true,
+        "userStore": "new oidc.WebStorageStateStore({ store: window.localStorage })",
+        "monitorSession": false,
+        "checkSessionInterval": 36000000
+      }
+    }
+  }
+}

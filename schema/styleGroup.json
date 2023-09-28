@@ -1,0 +1,37 @@
+{
+  "styleGroups": {
+    "polygon": {
+      "description": "",
+      "minZoom": 100,
+      "maxZoom": 80000,
+      "zoomUnit": "scale",
+      "filter": "feature[\"name\"] != null",
+      "styles": [
+        {
+          "type": "line",
+          "opacity": "1",
+          "dashArray": [5, 5],
+          "dashOffset": 0,
+          "width": 2,
+          "color": "#E0861A"
+        },
+        {
+          "type": "text",
+          "minZoom": 20,
+          "maxZoom": 1000,
+          "zoomUnit": "scale",
+          "label": {
+            "value": null,
+            "expression": "feature[\"name\"] "
+          },
+          "filter": "feature[\"name\"] != \"中文\"",
+          "font": ["Source Han Sans SC"],
+          "color": "#FF0000",
+          "backgroundColor": "#00FA9A",
+          "outlineSize": 6,
+          "size": 14
+        }
+      ]
+    }
+  }
+}

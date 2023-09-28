@@ -1,0 +1,72 @@
+{
+  "id": "6512f8e2893d89a96e355906",
+  "resourceId": "/appid/forms/6512f8e2893d89a96e355906 | 如果为空， 默认就是 ID。主要用于应用隔离配合权限系统使用",
+  "source": "",
+  "table": "",
+  "name": "表单1",
+  "type": "object",
+  "properties": {
+    "username": {
+      "type": "string",
+      "title": "Username",
+      "required": true,
+      "x-decorator": "FormItem",
+      "x-component": "Input",
+      "x-component-props": {
+        "prefix": "{{icon('UserOutlined')}}"
+      }
+    },
+    "password": {
+      "type": "string",
+      "title": "Password",
+      "required": true,
+      "x-decorator": "FormItem",
+      "x-component": "Password",
+      "x-component-props": {
+        "prefix": "{{icon('LockOutlined')}}"
+      }
+    }
+  },
+  "saga": {
+    "before": [
+      {
+        "description": "前置业务",
+        "action": {
+          "appId": "biz-api",
+          "method": "/forms/6512f8e2893d89a96e355906/before",
+          "headers": {
+            "description": "body 要保持原样， 因此不能修改， 额外参数只能通过 header 传递更合适"
+          }
+        },
+        "compensate": {
+          "description": "前置业务回滚",
+          "appId": "biz-api",
+          "method": "/forms/6512f8e2893d89a96e355906/before-undo",
+          "headers": {
+            "description": "body 要保持原样， 因此不能修改， 额外参数只能通过 header 传递更合适"
+          }
+        }
+      }
+    ],
+    "after": [
+      {
+        "description": "后置业务",
+        "action": {
+          "appId": "biz-api",
+          "method": "/forms/6512f8e2893d89a96e355906/after",
+          "headers": {
+            "description": "body 要保持原样， 因此不能修改， 额外参数只能通过 header 传递更合适"
+          }
+        },
+        "compensate": {
+          "description": "后置业务回滚",
+          "appId": "biz-api",
+          "method": "/forms/6512f8e2893d89a96e355906/after-undo",
+          "headers": {
+            "description": "body 要保持原样， 因此不能修改， 额外参数只能通过 header 传递更合适"
+          }
+        }
+      }
+    ]
+  }
+}

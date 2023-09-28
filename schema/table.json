@@ -1,0 +1,160 @@
+{
+  "tables": {
+    "table1": {
+      "id": "651445074b5abc31897fc6ed",
+      "formEngine": "formily@antd",
+      "name": "table1",
+      "title": "表单的标题",
+      "subtitle": "表单的副表题",
+      "description": "内部填写此表格的具体作用",
+      "source": "数据源名称、ID",
+      "request": {
+        "url": "http://api.zmap.xyz/project1/tb/651445074b5abc31897fc6ed",
+        "method": "GET | POST",
+        "headers": {
+          "description": "自定义请求头"
+        },
+        "params": {
+          "description": "此处设置静态参数， Object.assign('search 表单中的对象')",
+          "includeGeom": true
+        }
+      },
+      "search": {
+        "description": "formliy 表单配置, 一个弹性间距部署的表单",
+        "form": {
+          "labelCol": 6,
+          "wrapperCol": 12
+        },
+        "collapsed": "true 是否支持展开、缩起",
+        "defaultCollapsed": "false 默认是展开还是缩起",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "h1u8a16jzdd": {
+              "type": "void",
+              "x-component": "Space",
+              "x-component-props": {},
+              "x-designable-id": "h1u8a16jzdd",
+              "properties": {
+                "llf2nklimw3": {
+                  "type": "string[]",
+                  "title": "",
+                  "x-decorator": "FormItem",
+                  "x-component": "DatePicker.RangePicker",
+                  "x-validator": [],
+                  "x-component-props": {
+                    "placeholder": ""
+                  },
+                  "x-decorator-props": {
+                    "addonBefore": "开始时间",
+                    "addonAfter": "结束时间"
+                  },
+                  "x-designable-id": "llf2nklimw3",
+                  "x-index": 0
+                },
+                "drkqtlowzmh": {
+                  "type": "string",
+                  "title": "关键字",
+                  "x-decorator": "FormItem",
+                  "x-component": "Input",
+                  "x-validator": [],
+                  "x-component-props": {},
+                  "x-decorator-props": {},
+                  "x-designable-id": "drkqtlowzmh",
+                  "x-index": 1
+                }
+              },
+              "x-index": 0
+            }
+          },
+          "x-designable-id": "uzlxpaqaz64"
+        }
+      },
+      "sql": "SELECT * FROM t1 WHERE 1=1 [[and xzq_dm = @xzq_dm]] [[or (keyword LIKE '%@q%')]] | [[]] 如果参数为空， 则忽略。列表和数据库表没有直接联系， 并不是 1：1 的关系",
+      "columns": [
+        {
+          "title": "标题",
+          "key": "title",
+          "dataIndex": "title"
+        },
+        {
+          "title": "操作",
+          "key": "action",
+          "dataIndex": "",
+          "width": "330px",
+          "fixed": "right",
+          "schema": {
+            "type": "object",
+            "properties": {
+              "redirect": {
+                "title": "跳转",
+                "x-component": "Button",
+                "x-component-props": {
+                  "style": {
+                    "width": "150px",
+                    "marginRight": "10px",
+                    "marginBottom": "10px"
+                  },
+                  "onClick": "(row, record) => window.location.href = `http://project1.zmap.xyz/tb/view?id=${row.id}`;"
+                }
+              },
+              "video": {
+                "title": "播放",
+                "x-component": "Button",
+                "x-component-props": {
+                  "style": {
+                    "width": "150px",
+                    "marginRight": "10px",
+                    "marginBottom": "10px"
+                  },
+                  "onClick": "(row, record) => playVideo(row.url);"
+                }
+              },
+              "delete": {
+                "title": "删除",
+                "x-component": "Button",
+                "x-component-props": {
+                  "style": {
+                    "width": "150px",
+                    "marginRight": "10px",
+                    "marginBottom": "10px"
+                  },
+                  "onClick": "(row, record) => delete('DELETE', `http://api.zmap.xyz/project1/tb/651445074b5abc31897fc6ed/${row.id}`, { title: '', cofirm: '' });"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "toolbar": {
+        "description": "formliy 表单配置, 一个弹性间距部署的表单",
+        "form": {
+          "labelCol": 6,
+          "wrapperCol": 12
+        },
+        "schema": {
+          "type": "object",
+          "properties": {
+            "export": {
+              "order": 3,
+              "title": "导出",
+              "x-component": "Button",
+              "x-component-props": {
+                "style": {
+                  "width": "150px",
+                  "marginRight": "10px",
+                  "marginBottom": "10px"
+                },
+                "onClick": "(row, record) => export_csv('GET', 'http://api.zmap.xyz/project1/tb/651445074b5abc31897fc6ed/download?type=csv');"
+              }
+            }
+          }
+        }
+      },
+      "pagination": {
+        "type": "normal | last_id",
+        "pageSize": 2
+      }
+    }
+  }
+}

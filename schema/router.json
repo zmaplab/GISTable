@@ -1,0 +1,42 @@
+{
+  "routers": {
+    "project1": [
+      {
+        "to": "/m/map1",
+        "title": "一张图",
+        "icon": "icon-tuceng"
+      },
+      {
+        "to": "/sjgl",
+        "title": "数据管理",
+        "icon": "icon-tuceng",
+        "children": [
+          {
+            "to": "/t/table1",
+            "title": "网格数据",
+            "icon": "icon-ditu"
+          }
+        ]
+      },
+      {
+        "to": "/settings",
+        "title": "设置中心",
+        "icon": "icon-tuceng",
+        "children": [
+          {
+            "to": "/profile",
+            "title": "个人信息",
+            "icon": "icon-ditu",
+            "children": []
+          },
+          {
+            "to": "/system",
+            "title": "系统设置",
+            "icon": "icon-ditu",
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+}
