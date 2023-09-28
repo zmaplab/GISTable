@@ -1,30 +1,32 @@
 {
   "id": "6512f8e2893d89a96e355906",
   "resourceId": "/appid/forms/6512f8e2893d89a96e355906 | 如果为空， 默认就是 ID。主要用于应用隔离配合权限系统使用",
-  "formEngine": "formily@antd",
+  "engine": "formily@antd",
   "source": "",
   "table": "",
   "name": "表单1",
-  "type": "object",
-  "properties": {
-    "username": {
-      "type": "string",
-      "title": "Username",
-      "required": true,
-      "x-decorator": "FormItem",
-      "x-component": "Input",
-      "x-component-props": {
-        "prefix": "{{icon('UserOutlined')}}"
-      }
-    },
-    "password": {
-      "type": "string",
-      "title": "Password",
-      "required": true,
-      "x-decorator": "FormItem",
-      "x-component": "Password",
-      "x-component-props": {
-        "prefix": "{{icon('LockOutlined')}}"
+  "schema": {
+    "type": "object",
+    "properties": {
+      "username": {
+        "type": "string",
+        "title": "Username",
+        "required": true,
+        "x-decorator": "FormItem",
+        "x-component": "Input",
+        "x-component-props": {
+          "prefix": "{{icon('UserOutlined')}}"
+        }
+      },
+      "password": {
+        "type": "string",
+        "title": "Password",
+        "required": true,
+        "x-decorator": "FormItem",
+        "x-component": "Password",
+        "x-component-props": {
+          "prefix": "{{icon('LockOutlined')}}"
+        }
       }
     }
   },
